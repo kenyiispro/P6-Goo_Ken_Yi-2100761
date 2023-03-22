@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Level Text -->
+    <TextView
+        android:id="@+id/level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level 3"
+        android:textSize="30sp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/message_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Message Text -->
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are given five seconds to Press the highlighted box"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/level_text"
+        app:layout_constraintBottom_toTopOf="@+id/box1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Box 1 -->
+    <Button
+        android:id="@+id/box1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/box2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message_text"
+        android:onClick="box1Pressed"/>
+
+    <!-- Box 2 -->
+    <Button
+        android:id="@+id/box2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box3"
+        app:layout_constraintStart_toEndOf="@+id/box1"
+        app:layout_constraintTop_toBottomOf="@+id/message_text"
+        android:onClick="box2Pressed"/>
+
+    <!-- Box 3 -->
+    <Button
+        android:id="@+id/box3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box4"
+        app:layout_constraintStart_toEndOf="@id/box2"
+        app:layout_constraintTop_toBottomOf="@+id/message_text"
+        android:onClick="box3Pressed"/>
+
+    <!-- Box 4 -->
+    <Button
+        android:id="@+id/box4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box3"
+        app:layout_constraintTop_toBottomOf="@+id/message_text"
+        android:onClick="box4Pressed"/>
+
+    <!-- Box 5 -->
+    <Button
+        android:id="@+id/box5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/box6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box1"
+        android:onClick="box5Pressed"/>
+
+    <!-- Box 6 -->
+    <Button
+        android:id="@+id/box6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box7"
+        app:layout_constraintStart_toEndOf="@+id/box5"
+        app:layout_constraintTop_toBottomOf="@+id/box2"
+        android:onClick="box6Pressed"/>
+
+    <!-- Box 7 -->
+    <Button
+        android:id="@+id/box7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box8"
+        app:layout_constraintStart_toEndOf="@id/box6"
+        app:layout_constraintTop_toBottomOf="@+id/box3"
+        android:onClick="box7Pressed"/>
+
+    <!-- Box 8 -->
+    <Button
+        android:id="@+id/box8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box7"
+        app:layout_constraintTop_toBottomOf="@+id/box4"
+        android:onClick="box8Pressed"/>
+
+    <!-- Box 9 -->
+    <Button
+        android:id="@+id/box9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/box10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box5"
+        android:onClick="box9Pressed"/>
+
+    <!-- Box 10 -->
+    <Button
+        android:id="@+id/box10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box11"
+        app:layout_constraintStart_toEndOf="@+id/box9"
+        app:layout_constraintTop_toBottomOf="@+id/box6"
+        android:onClick="box10Pressed"/>
+
+    <!-- Box 11 -->
+    <Button
+        android:id="@+id/box11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box12"
+        app:layout_constraintStart_toEndOf="@id/box10"
+        app:layout_constraintTop_toBottomOf="@+id/box7"
+        android:onClick="box11Pressed"/>
+
+    <!-- Box 12 -->
+    <Button
+        android:id="@+id/box12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box11"
+        app:layout_constraintTop_toBottomOf="@+id/box8"
+        android:onClick="box12Pressed"/>
+
+    <!-- Box 13 -->
+    <Button
+        android:id="@+id/box13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/box14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box9"
+        android:onClick="box13Pressed"/>
+
+    <!-- Box 14 -->
+    <Button
+        android:id="@+id/box14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box15"
+        app:layout_constraintStart_toEndOf="@+id/box13"
+        app:layout_constraintTop_toBottomOf="@+id/box10"
+        android:onClick="box14Pressed"/>
+
+    <!-- Box 15 -->
+    <Button
+        android:id="@+id/box15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/box16"
+        app:layout_constraintStart_toEndOf="@id/box14"
+        app:layout_constraintTop_toBottomOf="@+id/box11"
+        android:onClick="box15Pressed"/>
+
+    <!-- Box 16 -->
+    <Button
+        android:id="@+id/box16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/box15"
+        app:layout_constraintTop_toBottomOf="@+id/box12"
+        android:onClick="box16Pressed"/>
+
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="30sp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/box13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
